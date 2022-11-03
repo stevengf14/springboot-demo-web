@@ -1,6 +1,7 @@
 package ec.learning.springboot.app.console.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import ec.learning.springboot.app.console.repository.IPersonRepo;
@@ -13,6 +14,7 @@ import ec.learning.springboot.app.console.repository.IPersonRepo;
 public class PersonServiceImpl implements IPersonService {
 
 	@Autowired
+	@Qualifier("person2")
 	private IPersonRepo repo;
 
 	@Override
