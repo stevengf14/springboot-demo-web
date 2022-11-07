@@ -7,5 +7,14 @@
 <body>
 	<h1>SpringBoot - Thymeleaf - Steven Guamán</h1>
 	<p th:text="'Hello, ' + ${name} + '!'" />
+
+	<table>
+		<th:block th:each="per: ${people}">
+			<tr>
+				<td th:text="${per.id}">...</td>
+				<td th:text="${per.name}">...</td>
+			</tr>
+		</th:block>
+	</table>
 </body>
 </html>
