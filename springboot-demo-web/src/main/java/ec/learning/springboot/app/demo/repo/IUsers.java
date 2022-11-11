@@ -10,4 +10,6 @@ import ec.learning.springboot.app.demo.model.Users;
  */
 public interface IUsers extends JpaRepository<Users, Integer> {
 
+	Users findByUsername(String username);
+
 }
